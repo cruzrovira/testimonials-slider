@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+:root {
+  --Dark-Blue: hsl(240, 38%, 20%);
+  --Grayish-Blue: hsl(240, 18%, 77%);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/pattern-curve.svg) left bottom/80% no-repeat;
+  color: var(--Dark-Blue);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.conteiner {
+  margin: 3em auto 0 auto;
+  width: 80%;
+}
+.slider {
+  background: url(../images/pattern-bg.svg) top center/ cover;
+  overflow: hidden;
+  padding: 2em;
+  position: relative;
+}
+.slider img {
+  width: 100%;
+}
+
+.pager {
+  align-items: center;
+  background: white;
+  border-radius: 2em;
+  bottom: 1.5em;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 2em;
+  justify-content: space-between;
+  left: 40%;
+  padding: 0 0.5em;
+  position: absolute;
+  width: 5em;
+}
+.pager img {
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+}
+.person {
+  background: url(../images/pattern-quotes.svg) no-repeat top center/20%;
+  margin-bottom: 4em;
+  margin-top: 1.5em;
+  padding-top: 1em;
+}
+
+.name {
+  display: block;
+  font-weight: 700;
+}
+.profession {
+  color: var(--Grayish-Blue);
+  display: block;
+}
+@media screen and (min-width: 700px) {
+  body {
+    align-items: center;
+    background-size: 40%;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .conteiner {
+    align-items: center;
+    display: flex;
+  }
+  .slider {
+    order: 2;
+    padding: 3em;
+    width: 50%;
+  }
+  .person {
+    order: 1;
+    position: relative;
+    transform: translateX(5em);
+    width: 50%;
+  }
+  .name,
+  .profession {
+    display: inline;
+  }
+  .profession {
+    margin-left: 0.5em;
+  }
+
+  .pager {
+    bottom: 2.5em;
+  }
+}
